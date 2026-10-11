@@ -1,108 +1,185 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex"><meta name="theme-color" content="#7a2e1f"><title>China 2026 · Luis & Gaby</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#7a2418">
+<title>China 2026 · Luis & Gaby</title>
 <style>
-:root{--red:#b23a2a;--deep:#7a2e1f;--gold:#d9a441;--cream:#fbf5ec;--ink:#2b2420;--mute:#7b6e64;--card:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;background:var(--cream);color:var(--ink);line-height:1.45}
-.hero{background:linear-gradient(160deg,#7a2e1f,#b23a2a 55%,#d9a441);color:#fff;padding:56px 22px 40px;text-align:center;position:relative;overflow:hidden}
-.hero:after{content:"中国";position:absolute;right:-10px;bottom:-30px;font-size:140px;opacity:.12;font-weight:700}
-.hero h1{font-family:Georgia,serif;font-size:46px;margin:0;letter-spacing:1px}.hero p{margin:6px 0;opacity:.95}.hero .who{font-size:14px;opacity:.85}
-nav{position:sticky;top:0;z-index:5;background:rgba(251,245,236,.95);backdrop-filter:blur(6px);display:flex;gap:6px;overflow-x:auto;padding:10px 12px;border-bottom:1px solid #eadfcf}
-nav a{flex:none;text-decoration:none;color:var(--deep);font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;background:#f3e6d3}
-main{max-width:680px;margin:0 auto;padding:8px 16px 60px}h2{font-family:Georgia,serif;color:var(--deep);margin:32px 0 12px;font-size:24px}
-.route{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}.route span{background:#fff;border:1px solid #eadfcf;border-radius:20px;padding:5px 10px}.route i{color:var(--gold);font-style:normal}
-.day{position:relative;padding-left:22px;margin-bottom:14px;border-left:2px solid #e3cfb2;margin-left:6px}
-.day:before{content:"";position:absolute;left:-8px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--red);border:3px solid var(--cream)}
-.day h3{margin:0 0 6px;font-size:15px;color:var(--red)}.day .city{color:var(--mute);font-weight:500}
-.card{background:var(--card);border-radius:14px;padding:12px 14px;margin:6px 0;box-shadow:0 1px 3px rgba(80,40,20,.08);border-left:4px solid var(--gold)}
-.card.flight{border-color:#3d6fa8}.card.hotel{border-color:var(--red)}.card.transfer{border-color:#4f8a5b}.card.gap{border-color:#e08a00;background:#fff7e8}
-.tag{font-size:11px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--mute)}.card b{display:block;margin:2px 0}.small{font-size:13px;color:var(--mute)}
-.conf{display:inline-block;margin-top:6px;font-family:ui-monospace,Menlo,monospace;font-size:13px;background:#f6efe4;border:1px dashed #cdb48e;border-radius:8px;padding:4px 8px;cursor:pointer;color:var(--ink)}
-.conf:after{content:" ⧉";color:var(--mute)}a.map{display:inline-block;margin:6px 8px 0 0;font-size:13px;color:#3d6fa8;font-weight:600}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;font-size:14px}td{padding:8px 10px;border-bottom:1px solid #f0e6d8}td:last-child{text-align:right;white-space:nowrap}tr.tot td{font-weight:700;background:#f6efe4}
-#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 16px;border-radius:20px;font-size:14px;opacity:0;transition:.25s;pointer-events:none}#toast.on{opacity:1}
-footer{text-align:center;color:var(--mute);font-size:12px;padding:20px}
+:root{--bg:#faf4ea;--bg2:#f3e8d6;--card:#fffdf9;--ink:#2a211c;--mute:#7a6c61;--line:#e8dac4;--red:#b23a2a;--deep:#7a2418;--gold:#c99a3b;--shadow:0 1px 2px rgba(70,35,15,.06),0 6px 18px rgba(70,35,15,.07);
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media (prefers-color-scheme:dark){:root{--bg:#17120f;--bg2:#221a15;--card:#211a16;--ink:#f1e7da;--mute:#a8998b;--line:#3a2e26;--red:#e0705c;--deep:#f0a08e;--gold:#e0b65a;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{margin:0;font:15px/1.5 var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:600}
+.hero{position:relative;overflow:hidden;color:#fff8ee;padding:56px 22px 0;text-align:center;background:radial-gradient(120% 80% at 80% 0%,#e3a24a 0%,transparent 55%),radial-gradient(90% 70% at 0% 30%,#9c2f1f 0%,transparent 60%),linear-gradient(170deg,#5a1a12,#9a2c1d 50%,#c4642f)}
+.hero .seal{display:inline-block;border:1.5px solid rgba(255,240,220,.6);border-radius:6px;padding:3px 9px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.hero h1{font-size:54px;margin:14px 0 2px;letter-spacing:.5px;line-height:1}
+.hero .dates{font-family:var(--serif);font-size:20px;font-style:italic;opacity:.95}
+.hero .names{font-size:13px;opacity:.85;margin-top:6px}
+.cd{display:flex;justify-content:center;gap:10px;margin:22px 0 6px}
+.cd div{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:12px;min-width:64px;padding:8px 6px;backdrop-filter:blur(4px)}
+.cd b{display:block;font:600 24px var(--serif)}.cd span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
+.cdlabel{font-size:12px;opacity:.85;letter-spacing:.05em}
+.sky{display:block;width:100%;height:90px;margin-top:18px}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 12px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;color:var(--deep);font-size:13px;font-weight:600;padding:6px 13px;border-radius:999px;background:var(--bg2);border:1px solid var(--line)}
+main{max-width:700px;margin:0 auto;padding:6px 16px 40px}
+section{margin-top:34px}h2{font-size:27px;margin:0 0 4px;color:var(--deep)}.sub{color:var(--mute);font-size:13px;margin:0 0 14px}
+.route{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center}
+.stop{display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 11px 5px 6px;font-size:13.5px;box-shadow:var(--shadow)}
+.stop i{width:10px;height:10px;border-radius:50%;background:var(--c)}.arr{color:var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;text-align:center;box-shadow:var(--shadow)}.stat b{display:block;font:600 22px var(--serif);color:var(--deep)}.stat span{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.08em}
+.city{margin:26px 0 8px;display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--c);padding-bottom:4px}
+.city h3{margin:0;font-size:21px;color:var(--c)}.city span{font-size:12.5px;color:var(--mute)}
+details.day{position:relative;margin:0 0 10px 14px;padding-left:18px;border-left:2px solid color-mix(in srgb,var(--c) 35%,transparent)}
+details.day>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:4px 0}
+details.day>summary::-webkit-details-marker{display:none}
+details.day>summary:before{content:"";position:absolute;left:-8px;top:9px;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px var(--bg)}
+.dt{font-weight:700;font-size:14.5px;color:var(--c)}.dl{color:var(--mute);font-size:13.5px;flex:1}
+.chev{transition:transform .25s;color:var(--mute)}details[open] .chev{transform:rotate(90deg)}
+.today>summary .dt:after{content:"TODAY";margin-left:8px;font-size:10px;letter-spacing:.1em;background:var(--c);color:#fff;border-radius:6px;padding:2px 6px}
+.today{background:color-mix(in srgb,var(--c) 7%,transparent);border-radius:0 12px 12px 0}
+.bday{background:linear-gradient(135deg,color-mix(in srgb,#e86a8a 14%,transparent),color-mix(in srgb,var(--gold) 16%,transparent));border-radius:0 16px 16px 0;padding-bottom:6px}
+.bday>summary .dl{color:#c2456a;font-weight:600}
+.card{position:relative;display:flex;gap:11px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 13px;margin:7px 0;box-shadow:var(--shadow)}
+.ic{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;background:var(--k)}
+.ic svg{width:18px;height:18px}.cb{min-width:0;flex:1}
+.k-flight{--k:#3b6ea5}.k-hotel{--k:#b23a2a}.k-transfer{--k:#3f7d4e}.k-activity{--k:#7b4fb0}.k-gap{--k:#d98a00}.k-bday{--k:#d14d78}.k-note{--k:#8a7a6a}
+.card.k-gap{background:color-mix(in srgb,#ffb020 10%,var(--card));border-color:color-mix(in srgb,#d98a00 40%,var(--line))}
+.tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--mute)}
+.ttl{font-weight:650;margin:1px 0 2px;line-height:1.3}.sm{font-size:13px;color:var(--mute)}.sm b{color:var(--ink);font-weight:600}
+ul.li{margin:6px 0 0;padding-left:18px;font-size:13.5px}ul.li li{margin:3px 0}
+.conf{display:inline-flex;align-items:center;gap:5px;margin:7px 6px 0 0;font:12.5px var(--mono);background:var(--bg2);border:1px dashed color-mix(in srgb,var(--gold) 70%,var(--line));border-radius:8px;padding:4px 8px;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent}
+.conf svg{width:12px;height:12px;opacity:.6}.conf:active{transform:scale(.97)}
+.pill{display:inline-block;font-size:11px;font-weight:600;border-radius:999px;padding:2px 8px;margin:6px 4px 0 0;background:var(--bg2);border:1px solid var(--line);color:var(--mute)}
+.pill.warn{color:#b26a00;border-color:#e8c27a}
+a.lnk{display:inline-block;margin:7px 10px 0 0;font-size:13px;font-weight:600;color:#3b6ea5;text-decoration:none}
+@media (prefers-color-scheme:dark){a.lnk{color:#8ab4e8}.pill.warn{color:#e8b25a}.bday>summary .dl{color:#f08aa8}}
+.hotel{border-left:4px solid var(--c)}
+.tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px;box-shadow:var(--shadow);margin-bottom:6px}
+.tbl td{padding:8px 11px;border-bottom:1px solid var(--line)}.tbl td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tbl tr.st td{font-weight:700;background:var(--bg2)}.tbl tr.gt td{font:700 17px var(--serif);background:var(--deep);color:var(--bg)}
+h4{font:600 16px var(--serif);margin:18px 0 6px;color:var(--red)}
+.donut{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:var(--shadow)}
+.donut svg{flex:none;width:130px;height:130px}.legend{font-size:13px;flex:1}.legend div{display:flex;align-items:center;gap:7px;margin:4px 0}.legend i{width:10px;height:10px;border-radius:3px;background:var(--c)}.legend span{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--mute)}
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:13.5px;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+footer{text-align:center;color:var(--mute);font-size:12px;padding:24px 16px 40px}
+.rv{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease}.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.chev,#toast{transition:none}}
 </style></head><body>
-<header class="hero"><p class="who">Luis & Gaby</p><h1>China 2026</h1><p>Nov 22 – Dec 9</p><p class="who">Shanghai · Zhangjiajie · Chongqing · Beijing</p></header>
-<nav><a href="#route">Route</a><a href="#days">Days</a><a href="#hotels">Hotels</a><a href="#gaps">Gaps</a><a href="#cost">Cost</a></nav>
+<header class="hero">
+<div class="seal">Luis &amp; Gaby</div>
+<h1>China 2026</h1>
+<div class="dates">Nov 22 – Dec 9</div>
+<div class="names">Shanghai · Zhangjiajie · Chongqing · Beijing</div>
+<div class="cd" id="cd"><div><b id="cdd">–</b><span>days</span></div><div><b id="cdh">–</b><span>hrs</span></div><div><b id="cdm">–</b><span>min</span></div></div>
+<div class="cdlabel" id="cdl">until AA 3152 departs IAH · Sun Nov 22, 7:00 AM</div>
+<svg class="sky" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+<path fill="rgba(255,235,210,.14)" d="M0 70 Q60 40 120 62 T240 55 T400 60 V90 H0Z"/>
+<path fill="rgba(255,235,210,.22)" d="M0 90V74h18v-8h10v8h14V58h8v-6h4v6h8v32h10V66h12v-6h6v6h10v24h8V48h3V30h2l2-14 2 14h2v18h3v12h6v-8h3v-8h4v8h3v8h10v38h12V62h6l4-6 4 6h6v28h10V70h16v-8h14v8h14v20h8V56h10v34h12V64h6V50h2l2-8 2 8h2v14h6v26h14V72h20v18h16V60h12v30h10V76h22v14Z"/>
+<path fill="var(--bg)" d="M0 84 Q100 76 200 84 T400 82 V90 H0Z"/>
+</svg>
+</header>
+<nav><a href="#route">Route</a><a href="#days">Itinerary</a><a href="#disney">🎂 Nov 24</a><a href="#hotels">Hotels</a><a href="#gaps">Gaps</a><a href="#cost">Cost</a></nav>
 <main>
-<h2 id="route">Route</h2>
-<div class="route"><span>Houston</span><i>→</i><span>Shanghai</span><i>→</i><span>Zhangjiajie</span><i>→</i><span>Xiyue·Linjiang Inn</span><i>→</i><span>Chongqing</span><i>→</i><span>Beijing</span><i>→</i><span>Shanghai</span><i>→</i><span>Houston</span></div>
-<p class="small">All times are local. American Airlines confirmation <span class="conf" data-c="NREWIS">NREWIS</span> · Luis Diaz & Gabriela Chavez Chavarria · 1 bag each.</p>
-
-<h2 id="days">Day by day</h2>
-<div class="day"><h3>Sun Nov 22 <span class="city">· Houston → Dallas → Shanghai</span></h3>
-<div class="card flight"><div class="tag">Flight · American Airlines</div><b>AA 3152 · IAH 7:00 AM → DFW 8:25 AM</b><span class="conf" data-c="NREWIS">NREWIS</span></div>
-<div class="card flight"><div class="tag">Flight · American Airlines</div><b>AA 127 · DFW 10:50 AM → PVG 4:50 PM (+1, Nov 23)</b><div class="small">Seats 33D (Luis), 33E (Gaby)</div><span class="conf" data-c="NREWIS">NREWIS</span></div></div>
-<div class="day"><h3>Mon Nov 23 <span class="city">· Shanghai</span></h3>
-<div class="card transfer"><div class="tag">Airport pickup · Trip.com</div><b>PVG → No. 399 Renmin Road, 5:55 PM</b><div class="small">Driver arranged · Meet & Greet · $33.65</div><span class="conf" data-c="1658114885404528">1658114885404528</span></div>
-<div class="card hotel"><div class="tag">Check-in · 4 nights</div><b>Crystal Orange Shanghai the Bund Yu Garden Hotel</b><div class="small">Nov 23–27 · Superior Queen Room</div><span class="conf" data-c="1658114493793951">1658114493793951</span></div></div>
-<div class="day"><h3>Nov 24–26 <span class="city">· Shanghai</span></h3><p class="small">Free days in Shanghai.</p></div>
-<div class="day"><h3>Fri Nov 27 <span class="city">· Shanghai → Zhangjiajie</span></h3>
-<div class="card gap"><div class="tag">⚠ Open gap</div><b>No booked transport Shanghai → Zhangjiajie</b></div>
-<div class="card hotel"><div class="tag">Check-in · 2 nights</div><b>Zhangjiajie Ruyuan Homestay</b><div class="small">Nov 27–29 · Hefeng Double Bed Bathtub Room</div><span class="conf" data-c="1658114494064828">1658114494064828</span></div></div>
-<div class="day"><h3>Sun Nov 29 <span class="city">· Zhangjiajie</span></h3>
-<div class="card hotel"><div class="tag">Extension · 1 night (same room)</div><b>Zhangjiajie Ruyuan Homestay</b><div class="small">Nov 29–30</div><span class="conf" data-c="1658114716493655">1658114716493655</span></div></div>
-<div class="day"><h3>Mon Nov 30 <span class="city">· Zhangjiajie → Xiyue·Linjiang Inn</span></h3>
-<div class="card gap"><div class="tag">⚠ Open gap</div><b>No booked transport Zhangjiajie → Xiyue·Linjiang Inn</b></div>
-<div class="card hotel"><div class="tag">Check-in · 1 night</div><b>Xiyue·Linjiang Inn</b><div class="small">Nov 30–Dec 1 · Cliffside River-View Comfort Double Bed Room</div><span class="conf" data-c="1658113580437903">1658113580437903</span></div></div>
-<div class="day"><h3>Tue Dec 1 <span class="city">· → Chongqing</span></h3>
-<div class="card gap"><div class="tag">⚠ Open gap</div><b>No booked transport Linjiang Inn → Chongqing</b></div>
-<div class="card hotel"><div class="tag">Check-in · 3 nights</div><b>BERKIN. Baili Jin Skyview Riverfront Hotel</b><div class="small">Dec 1–4 · Deep Sky Horizon 270° Crystal Tub Suite</div><span class="conf" data-c="1658114482256205">1658114482256205</span></div></div>
-<div class="day"><h3>Dec 2–3 <span class="city">· Chongqing</span></h3><p class="small">Free days in Chongqing.</p></div>
-<div class="day"><h3>Fri Dec 4 <span class="city">· Chongqing → Beijing</span></h3>
-<div class="card flight"><div class="tag">Flight · Air China · ticketed</div><b>CA1440 · CKG 6:15 PM → PEK 8:55 PM</b><div class="small">2 passengers · $221.12</div><span class="conf" data-c="1658115271259154">1658115271259154</span></div>
-<div class="card hotel"><div class="tag">Check-in · 3 nights</div><b>Manxin Mansion Beijing Houhai and Drum Tower Courtyard</b><div class="small">Dec 4–7 · Yixin Double Bed Room</div><span class="conf" data-c="1658114716464081">1658114716464081</span></div></div>
-<div class="day"><h3>Dec 5–6 <span class="city">· Beijing</span></h3><p class="small">Free days in Beijing.</p></div>
-<div class="day"><h3>Mon Dec 7 <span class="city">· Beijing</span></h3>
-<div class="card hotel"><div class="tag">Extension · 1 night</div><b>Manxin Mansion Beijing</b><div class="small">Dec 7–8</div><span class="conf" data-c="1658114716470309">1658114716470309</span></div></div>
-<div class="day"><h3>Tue Dec 8 <span class="city">· Beijing → Shanghai</span></h3>
-<div class="card gap"><div class="tag">⚠ Open gap</div><b>Beijing → Shanghai not booked on Trip.com</b></div>
-<div class="card hotel"><div class="tag">Check-in · 1 night</div><b>Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel</b><div class="small">Dec 8–9 · Treasure Big Bed Room</div><span class="conf" data-c="1658114716484076">1658114716484076</span></div></div>
-<div class="day"><h3>Wed Dec 9 <span class="city">· Shanghai → Houston</span></h3>
-<div class="card transfer"><div class="tag">Airport drop-off · Trip.com</div><b>No. 678 Hankou Road → PVG, 3:00 PM</b><div class="small">$23.68 · Plenty of buffer for the 6:50 PM international departure.</div><span class="conf" data-c="1658115465111967">1658115465111967</span></div>
-<div class="card flight"><div class="tag">Flight · American Airlines</div><b>AA 128 · PVG 6:50 PM → DFW 5:50 PM (same day)</b><div class="small">Seats 33D / 33E</div><span class="conf" data-c="NREWIS">NREWIS</span></div>
-<div class="card flight"><div class="tag">Flight · American Airlines</div><b>AA 2790 · DFW 9:26 PM → IAH 10:39 PM</b><span class="conf" data-c="NREWIS">NREWIS</span></div></div>
-
-<h2 id="hotels">Hotels</h2>
-<div id="hl"></div>
-
-<h2 id="gaps">Open gaps</h2>
-<div class="card gap"><b>Nov 27 · Shanghai → Zhangjiajie</b><div class="small">No transport booked.</div></div>
-<div class="card gap"><b>Nov 30 · Zhangjiajie → Xiyue·Linjiang Inn</b><div class="small">No transport booked.</div></div>
-<div class="card gap"><b>Dec 1 · Xiyue·Linjiang Inn → Chongqing</b><div class="small">No transport booked.</div></div>
-<div class="card gap"><b>Dec 8 · Beijing → Shanghai</b><div class="small">Not booked on Trip.com.</div></div>
-<div class="card transfer"><b>✓ Dec 9 drop-off timing</b><div class="small">3:00 PM pickup for a 6:50 PM international departure is fine.</div></div>
-
-<h2 id="cost">Full cost breakdown</h2>
-<h3 style="color:var(--red);font-size:16px">American Airlines · <span class="conf" data-c="NREWIS">NREWIS</span></h3>
-<table id="aa"></table>
-<p class="small">Total $2,322.00 · paid with AmEx ending 3027.</p>
-<h3 style="color:var(--red);font-size:16px">Trip.com bookings</h3>
-<table id="ct"></table>
-<h3 style="color:var(--red);font-size:16px">Totals</h3>
-<table id="tt"></table>
-<p class="small">Trip.com bookings are on account gabychavezch19@gmail.com.</p>
-</main><footer>Made with ♥ for Luis & Gaby · 2026</footer><div id="toast">Copied</div>
+<section id="route" class="rv"><h2>The route</h2><p class="sub">All times are local.</p><div class="route" id="routeEl"></div>
+<div class="stats"><div class="stat"><b>18</b><span>days</span></div><div class="stat"><b>6</b><span>hotels</span></div><div class="stat"><b>5</b><span>flights</span></div></div></section>
+<section id="days"><h2>Day by day</h2><p class="sub">Tap a day to collapse or expand. Tap any confirmation number to copy it.</p><div id="tl"></div></section>
+<section id="hotels"><h2>Hotels</h2><p class="sub">English names to search in Google Maps, Amap or Baidu Maps.</p><div id="hl"></div></section>
+<section id="gaps"><h2>Open gaps</h2><p class="sub">Transport not yet booked.</p><div id="gl"></div></section>
+<section id="cost"><h2>Full cost breakdown</h2><p class="sub">Grand total <b>$4,368.05</b> · AA total $2,322.00 · paid with AmEx ending 3027.</p>
+<div class="donut rv" id="donut"></div>
+<h4>American Airlines · <span class="conf" data-c="NREWIS">NREWIS</span></h4><table class="tbl" id="aa"></table><p class="sm">Paid with AmEx ending 3027.</p>
+<h4>Trip.com stays &amp; transport</h4><table class="tbl" id="ct"></table>
+<h4>Activities</h4><table class="tbl" id="act"></table>
+<h4>Totals</h4><table class="tbl" id="tt"></table>
+<p class="sm">Trip.com bookings are on account gabychavezch19@gmail.com.</p></section>
+</main>
+<footer>Made with ♥ for Luis &amp; Gaby · China 2026</footer><div id="toast">Copied</div>
 <script>
-const H=[["Crystal Orange Shanghai the Bund Yu Garden Hotel","Shanghai","Nov 23–27 · 4 nights","Superior Queen Room · guest Luis Fernando Diaz","1658114493793951","Crystal Orange Shanghai the Bund Yu Garden Hotel"],
-["Zhangjiajie Ruyuan Homestay (Wulingyuan Landmark Store, National Forest Park)","Zhangjiajie","Nov 27–30 · 3 nights (2 bookings)","Hefeng Double Bed Bathtub Room","1658114494064828 / 1658114716493655","Zhangjiajie Ruyuan Homestay Wulingyuan"],
-["Xiyue·Linjiang Inn","City not shown on booking","Nov 30–Dec 1 · 1 night","Cliffside River-View Comfort Double Bed Room · guest Gabriela Chavez","1658113580437903","Xiyue Linjiang Inn","Xiyue·Linjiang Inn (check Trip.com for exact Chinese name/address)"],
-["BERKIN. Baili Jin Skyview Riverfront Hotel","Chongqing · near Liberation Monument & Hongya Cave","Dec 1–4 · 3 nights","Deep Sky Horizon 270° Crystal Tub Suite","1658114482256205","BERKIN Baili Jin Skyview Riverfront Hotel Chongqing"],
-["Manxin Mansion Beijing Houhai and Drum Tower Courtyard","Beijing","Dec 4–8 · 4 nights (2 bookings)","Yixin Double Bed Room","1658114716464081 / 1658114716470309","Manxin Mansion Beijing Houhai Drum Tower"],
-["Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel","Shanghai","Dec 8–9 · 1 night","Treasure Big Bed Room","1658114716484076","Treasury Hotel Nanjing East Road People's Square Shanghai"]];
-document.getElementById('hl').innerHTML=H.map(h=>`<div class="card hotel"><div class="tag">${h[1]}</div><b>${h[0]}</b><div class="small">${h[2]} · ${h[3]}</div>${h[4].split(' / ').map(c=>`<span class="conf" data-c="${c}">${c}</span> `).join('')}<div class="small" style="margin-top:6px">Amap/Baidu search: ${h[5]}</div><a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h[5])}">Google Maps ↗</a><a class="map" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(h[5])}">Amap ↗</a></div>`).join('');
-const C=[["Airport pickup PVG → Renmin Rd (Nov 23)",33.65],["Crystal Orange Bund Yu Garden (4 nts)",454.43],["Ruyuan Homestay (2 nts)",175.12],["Ruyuan Homestay (1 nt)",87.64],["Xiyue·Linjiang Inn (1 nt)",81.57],["BERKIN Chongqing (3 nts)",312.72],["Air China CA1440 CKG→PEK (2 pax)",221.12],["Manxin Mansion (3 nts)",315.03],["Manxin Mansion (1 nt)",98.59],["Treasury Hotel Shanghai (1 nt)",111.32],["Airport drop-off Hankou Rd → PVG (Dec 9)",23.68]];
-const t=C.reduce((a,c)=>a+Math.round(c[1]*100),0)/100;
-const A=[["Luis · ticket (0012362505394)",304.00],["Luis · taxes & fees",803.03],["Luis · seat DFW→PVG (33D)",30.08],["Luis · seat PVG→DFW (33D)",25.28],["Gaby · ticket (0012362505395)",304.00],["Gaby · taxes & fees",803.03],["Gaby · seat DFW→PVG (33E)",28.57],["Gaby · seat PVG→DFW (33E)",24.01]];
-const sum=L=>L.reduce((x,c)=>x+Math.round(c[1]*100),0)/100;
-const f=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
-const rows=L=>L.map(c=>`<tr><td>${c[0]}</td><td>${f(c[1])}</td></tr>`).join('');
-const a=sum(A);
-document.getElementById('aa').innerHTML=rows(A)+`<tr class="tot"><td>AA subtotal</td><td>${f(a)}</td></tr>`;
-document.getElementById('ct').innerHTML=rows(C)+`<tr class="tot"><td>Trip.com subtotal</td><td>${f(t)}</td></tr>`;
-document.getElementById('tt').innerHTML=`<tr><td>American Airlines</td><td>${f(a)}</td></tr><tr><td>Trip.com</td><td>${f(t)}</td></tr><tr class="tot"><td>Grand total</td><td>${f(Math.round((a+t)*100)/100)}</td></tr>`;
-const toast=document.getElementById('toast');
+const I={flight:'<path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" fill="currentColor"/>',
+hotel:'<path d="M3 20V5h2v9h7V8h6a3 3 0 0 1 3 3v9h-2v-3H5v3zm5-7a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="currentColor"/>',
+transfer:'<path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1zm2.2-1h9.6l-1-3H8.2zM7.5 15a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm9 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="currentColor"/>',
+activity:'<path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17l-6.1 3.4 1.5-6.8L2.2 9l6.9-.7z" fill="currentColor"/>',
+gap:'<path d="M12 3l10 18H2zm-1 6v6h2V9zm0 8v2h2v-2z" fill="currentColor"/>',
+bday:'<path d="M12 2c1 1.3 1.5 2.3 1.5 3a1.5 1.5 0 0 1-3 0c0-.7.5-1.7 1.5-3zM11 8h2v3h5a2 2 0 0 1 2 2v2.5c-1 0-1.5-.8-2.5-.8s-1.5.8-2.5.8-1.5-.8-2.5-.8-1.5.8-2.5.8-1.5-.8-2.5-.8S5 15.5 4 15.5V13a2 2 0 0 1 2-2h5zM4 17.3c1 0 1.5-.8 2.5-.8s1.5.8 2.5.8 1.5-.8 2.5-.8 1.5.8 2.5.8 1.5-.8 2.5-.8 1.5.8 2.5.8V21H4z" fill="currentColor"/>',
+note:'<path d="M5 3h10l4 4v14H5zm9 1.5V8h3.5zM8 12h8v1.5H8zm0 3h8v1.5H8z" fill="currentColor"/>'};
+const COPY='<svg viewBox="0 0 24 24"><path d="M8 8h11v13H8zM5 3h11v3H7v11H5z" fill="currentColor"/></svg>';
+const svg=k=>`<svg viewBox="0 0 24 24">${I[k]}</svg>`;
+const C={hou:'#3b6ea5',sha:'#b23a2a',zjj:'#3f7d4e',lj:'#2a7f8a',ckg:'#c06a14',bj:'#8a3b6b'};
+const ROUTE=[['Houston','hou'],['Shanghai','sha'],['Zhangjiajie','zjj'],['Xiyue·Linjiang Inn','lj'],['Chongqing','ckg'],['Beijing','bj'],['Shanghai','sha'],['Houston','hou']];
+const cf=c=>`<span class="conf" data-c="${c}">${c}${COPY}</span>`;
+const card=(k,tag,ttl,body='',confs=[])=>`<div class="card k-${k}"><div class="ic">${svg(k)}</div><div class="cb"><div class="tag">${tag}</div><div class="ttl">${ttl}</div>${body}${confs.map(cf).join('')}</div></div>`;
+const S=t=>`<div class="sm">${t}</div>`;
+const CITIES=[
+{n:'Departure',c:'hou',r:'Sun Nov 22',days:[
+ {d:'2026-11-22',t:'Sun Nov 22',l:'Houston → Dallas → Shanghai',h:card('flight','Flight · American Airlines','AA 3152 · IAH 7:00 AM → DFW 8:25 AM',S('Luis &amp; Gaby · 1 bag each'),['NREWIS'])+card('flight','Flight · American Airlines','AA 127 · DFW 10:50 AM → PVG 4:50 PM <span class="sm">(+1, Nov 23)</span>',S('Seats <b>33D</b> (Luis), <b>33E</b> (Gaby)'),['NREWIS'])}]},
+{n:'Shanghai',c:'sha',r:'Nov 23 – 27',days:[
+ {d:'2026-11-23',t:'Mon Nov 23',l:'Arrive Shanghai',h:card('transfer','Airport pickup · Trip.com','PVG → No. 399 Renmin Road · 5:55 PM',S('Driver arranged · Meet &amp; Greet · $33.65'),['1658114885404528'])+card('hotel','Check-in · 4 nights','Crystal Orange Shanghai the Bund Yu Garden Hotel',S('Nov 23–27 · Superior Queen Room · guest Luis Fernando Diaz'),['1658114493793951'])},
+ {d:'2026-11-24',t:'Tue Nov 24',l:'🎂 Gaby turns 30 · Shanghai Disneyland',bday:1,id:'disney',h:
+  card('activity','Activity · Trip.com','Shanghai Disneyland 1-Day Ticket · Adult ×2',S('$131.18 total ($65.59 each) · non-refundable')+S('Travelers: DIAZ/LUIS FERNANDO · CHAVEZ CHAVARRIA/GABRIELA ABIGAIL')+'<span class="pill warn">Booked · awaiting supplier confirmation</span><span class="pill">Confirmation → gabychavezch19@gmail.com</span>'+S('<b>Bring original passports</b>: your passport is your entry ID.'),['1658115962147614'])+
+  card('note','Game plan','Rope-drop Zootopia',`<ul class="li"><li>Park hours for Nov 24 aren't published yet (it typically opens around 8:30 AM).</li><li>Head straight to <b>Zootopia: Hot Pursuit</b> at opening.</li><li>If lines are long, buy <b>Premier Access</b> same-day in the Shanghai Disney app.</li><li>Set up <b>Alipay / WeChat Pay</b> before the trip.</li></ul>`)+
+  card('bday','Birthday ideas','Make it a 30th to remember',`<ul class="li"><li><b>Free birthday button</b> at Guest Services (to the right of the entrance gates; show your passport), plus <b>“Celebrating Together”</b> buttons.</li><li><b>Royal Banquet Hall</b> character dinner in the castle: about ¥428/adult + 15% service. Book in the Shanghai Disney app about 1 week ahead (around <b>Nov 17</b>) and mention the birthday.</li><li><b>ILLUMINATE!</b> fireworks: best view near the Storytellers Statue. Arrive 30–40 min early.</li></ul>`)},
+ {d:'2026-11-25',e:'2026-11-26',t:'Nov 25 – 26',l:'Free days in Shanghai',h:S('No bookings.')}]},
+{n:'Zhangjiajie',c:'zjj',r:'Nov 27 – 30',days:[
+ {d:'2026-11-27',e:'2026-11-28',t:'Fri Nov 27',l:'Shanghai → Zhangjiajie',h:card('gap','Open gap','No booked transport Shanghai → Zhangjiajie')+card('hotel','Check-in · 2 nights','Zhangjiajie Ruyuan Homestay',S('Wulingyuan Landmark Store, National Forest Park · Nov 27–29 · Hefeng Double Bed Bathtub Room'),['1658114494064828'])},
+ {d:'2026-11-29',t:'Sun Nov 29',l:'Zhangjiajie',h:card('hotel','Extension · 1 night (same room)','Zhangjiajie Ruyuan Homestay',S('Nov 29–30'),['1658114716493655'])}]},
+{n:'Xiyue·Linjiang Inn',c:'lj',r:'Nov 30 – Dec 1',days:[
+ {d:'2026-11-30',t:'Mon Nov 30',l:'Zhangjiajie → Xiyue·Linjiang Inn',h:card('gap','Open gap','No booked transport Zhangjiajie → Xiyue·Linjiang Inn')+card('hotel','Check-in · 1 night','Xiyue·Linjiang Inn',S('Nov 30–Dec 1 · Cliffside River-View Comfort Double Bed Room · guest Gabriela Chavez'),['1658113580437903'])}]},
+{n:'Chongqing',c:'ckg',r:'Dec 1 – 4',days:[
+ {d:'2026-12-01',t:'Tue Dec 1',l:'→ Chongqing',h:card('gap','Open gap','No booked transport Linjiang Inn → Chongqing')+card('hotel','Check-in · 3 nights','BERKIN. Baili Jin Skyview Riverfront Hotel',S('Near Liberation Monument &amp; Hongya Cave · Dec 1–4 · Deep Sky Horizon 270° Crystal Tub Suite'),['1658114482256205'])},
+ {d:'2026-12-02',e:'2026-12-03',t:'Dec 2 – 3',l:'Free days in Chongqing',h:S('No bookings.')}]},
+{n:'Beijing',c:'bj',r:'Dec 4 – 8',days:[
+ {d:'2026-12-04',t:'Fri Dec 4',l:'Chongqing → Beijing',h:card('flight','Flight · Air China · ticketed','CA1440 · CKG 6:15 PM → PEK 8:55 PM',S('2 passengers · $221.12'),['1658115271259154'])+card('hotel','Check-in · 3 nights','Manxin Mansion Beijing Houhai and Drum Tower Courtyard',S('Dec 4–7 · Yixin Double Bed Room'),['1658114716464081'])},
+ {d:'2026-12-05',e:'2026-12-06',t:'Dec 5 – 6',l:'Free days in Beijing',h:S('No bookings.')},
+ {d:'2026-12-07',t:'Mon Dec 7',l:'Beijing',h:card('hotel','Extension · 1 night','Manxin Mansion Beijing',S('Dec 7–8'),['1658114716470309'])}]},
+{n:'Shanghai',c:'sha',r:'Dec 8 – 9',days:[
+ {d:'2026-12-08',t:'Tue Dec 8',l:'Beijing → Shanghai',h:card('gap','Open gap','Beijing → Shanghai not booked on Trip.com')+card('hotel','Check-in · 1 night',"Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel",S('Dec 8–9 · Treasure Big Bed Room'),['1658114716484076'])},
+ {d:'2026-12-09',t:'Wed Dec 9',l:'Shanghai → Houston',h:card('transfer','Airport drop-off · Trip.com','No. 678 Hankou Road → PVG · 3:00 PM',S('$23.68 · plenty of buffer for the 6:50 PM international departure'),['1658115465111967'])+card('flight','Flight · American Airlines','AA 128 · PVG 6:50 PM → DFW 5:50 PM <span class="sm">(same day)</span>',S('Seats <b>33D</b> / <b>33E</b>'),['NREWIS'])+card('flight','Flight · American Airlines','AA 2790 · DFW 9:26 PM → IAH 10:39 PM','',['NREWIS'])}]}];
+const HOT=[['Crystal Orange Shanghai the Bund Yu Garden Hotel','sha','Shanghai','Nov 23–27 · 4 nights','Superior Queen Room',['1658114493793951'],'Crystal Orange Shanghai the Bund Yu Garden Hotel'],
+['Zhangjiajie Ruyuan Homestay (Wulingyuan Landmark Store, National Forest Park)','zjj','Zhangjiajie','Nov 27–30 · 3 nights (2 bookings)','Hefeng Double Bed Bathtub Room',['1658114494064828','1658114716493655'],'Zhangjiajie Ruyuan Homestay Wulingyuan'],
+['Xiyue·Linjiang Inn','lj','City not shown on booking','Nov 30–Dec 1 · 1 night','Cliffside River-View Comfort Double Bed Room',['1658113580437903'],'Xiyue Linjiang Inn'],
+['BERKIN. Baili Jin Skyview Riverfront Hotel','ckg','Chongqing · near Liberation Monument & Hongya Cave','Dec 1–4 · 3 nights','Deep Sky Horizon 270° Crystal Tub Suite',['1658114482256205'],'BERKIN Baili Jin Skyview Riverfront Hotel Chongqing'],
+['Manxin Mansion Beijing Houhai and Drum Tower Courtyard','bj','Beijing','Dec 4–8 · 4 nights (2 bookings)','Yixin Double Bed Room',['1658114716464081','1658114716470309'],'Manxin Mansion Beijing Houhai Drum Tower'],
+["Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel",'sha','Shanghai','Dec 8–9 · 1 night','Treasure Big Bed Room',['1658114716484076'],"Treasury Hotel Nanjing East Road People's Square Shanghai"]];
+const GAPS=[['Nov 27','Shanghai → Zhangjiajie','No transport booked.'],['Nov 30','Zhangjiajie → Xiyue·Linjiang Inn','No transport booked.'],['Dec 1','Xiyue·Linjiang Inn → Chongqing','No transport booked.'],['Dec 8','Beijing → Shanghai','Not booked on Trip.com.']];
+const AA=[['Luis · ticket (0012362505394)',304.00],['Luis · taxes & fees',803.03],['Luis · seat DFW→PVG (33D)',30.08],['Luis · seat PVG→DFW (33D)',25.28],['Gaby · ticket (0012362505395)',304.00],['Gaby · taxes & fees',803.03],['Gaby · seat DFW→PVG (33E)',28.57],['Gaby · seat PVG→DFW (33E)',24.01]];
+const TC=[['Airport pickup PVG → Renmin Rd (Nov 23)',33.65,'t'],['Crystal Orange Bund Yu Garden (4 nts)',454.43,'h'],['Ruyuan Homestay (2 nts)',175.12,'h'],['Ruyuan Homestay (1 nt)',87.64,'h'],['Xiyue·Linjiang Inn (1 nt)',81.57,'h'],['BERKIN Chongqing (3 nts)',312.72,'h'],['Air China CA1440 CKG→PEK (2 pax)',221.12,'f'],['Manxin Mansion (3 nts)',315.03,'h'],['Manxin Mansion (1 nt)',98.59,'h'],['Treasury Hotel Shanghai (1 nt)',111.32,'h'],['Airport drop-off Hankou Rd → PVG (Dec 9)',23.68,'t']];
+const ACT=[['Shanghai Disneyland 1-Day Ticket ×2 (Nov 24, Trip.com #1658115962147614)',131.18]];
+const $=id=>document.getElementById(id);
+const cents=L=>L.reduce((x,c)=>x+Math.round(c[1]*100),0);
+const f=c=>'$'+(c/100).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const rows=L=>L.map(c=>`<tr><td>${c[0]}</td><td>${f(Math.round(c[1]*100))}</td></tr>`).join('');
+$('routeEl').innerHTML=ROUTE.map((r,i)=>`${i?'<span class="arr">→</span>':''}<span class="stop" style="--c:${C[r[1]]}"><i></i>${r[0]}</span>`).join('');
+const now=new Date();const ymd=new Date(now.getTime()-now.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+$('tl').innerHTML=CITIES.map(c=>`<div class="rv" style="--c:${C[c.c]}"><div class="city"><h3>${c.n}</h3><span>${c.r}</span></div>${c.days.map(d=>{const today=ymd>=d.d&&ymd<=(d.e||d.d);return `<details open class="day${d.bday?' bday':''}${today?' today':''}"${d.id?` id="${d.id}"`:''}><summary><span class="dt">${d.t}</span><span class="dl">${d.l}</span><svg class="chev" width="14" height="14" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none"/></svg></summary>${d.h}</details>`}).join('')}</div>`).join('');
+$('hl').innerHTML=HOT.map(h=>`<div class="card k-hotel hotel rv" style="--c:${C[h[1]]}"><div class="ic">${svg('hotel')}</div><div class="cb"><div class="tag">${h[2]}</div><div class="ttl">${h[0]}</div>${S(h[3]+' · '+h[4])}${h[5].map(cf).join('')}${S('Amap/Baidu search: <b>'+h[6]+'</b>')}<a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h[6])}">Google Maps ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(h[6])}">Amap ↗</a></div></div>`).join('');
+$('gl').innerHTML=GAPS.map(g=>card('gap',g[0],g[1],S(g[2]))).join('')+card('transfer','Checked','Dec 9 drop-off timing',S('A 3:00 PM pickup for a 6:50 PM international departure is fine.'));
+const a=cents(AA),t=cents(TC),x=cents(ACT),g=a+t+x;
+$('aa').innerHTML=rows(AA)+`<tr class="st"><td>AA subtotal</td><td>${f(a)}</td></tr>`;
+$('ct').innerHTML=rows(TC)+`<tr class="st"><td>Trip.com subtotal</td><td>${f(t)}</td></tr>`;
+$('act').innerHTML=rows(ACT)+`<tr class="st"><td>Activities subtotal</td><td>${f(x)}</td></tr>`;
+$('tt').innerHTML=`<tr><td>American Airlines</td><td>${f(a)}</td></tr><tr><td>Trip.com stays &amp; transport</td><td>${f(t)}</td></tr><tr><td>Activities</td><td>${f(x)}</td></tr><tr class="gt"><td>Grand total</td><td>${f(g)}</td></tr>`;
+const cat=k=>cents(TC.filter(r=>r[2]==k));
+const D=[['Flights (AA + Air China)',a+cat('f'),'#3b6ea5'],['Hotels',cat('h'),'#b23a2a'],['Transfers',cat('t'),'#3f7d4e'],['Activities',x,'#7b4fb0']];
+let off=0;const R=15.915;
+$('donut').innerHTML=`<svg viewBox="0 0 42 42"><circle cx="21" cy="21" r="${R}" fill="none" stroke="var(--line)" stroke-width="6"/>${D.map(d=>{const p=d[1]/g*100;const s=`<circle cx="21" cy="21" r="${R}" fill="none" stroke="${d[2]}" stroke-width="6" stroke-dasharray="${p} ${100-p}" stroke-dashoffset="${25-off}"/>`;off+=p;return s}).join('')}<text x="21" y="20" text-anchor="middle" font-size="3" fill="var(--mute)">TOTAL</text><text x="21" y="25" text-anchor="middle" font-size="4.6" font-weight="700" fill="var(--ink)">${f(g).replace(/\.\d+$/,'')}</text></svg><div class="legend">${D.map(d=>`<div style="--c:${d[2]}"><i></i>${d[0]}<span>${f(d[1])}</span></div>`).join('')}</div>`;
+// countdown
+const dep=Date.parse('2026-11-22T13:00:00Z'),home=Date.parse('2026-12-10T04:39:00Z');
+function tick(){const n=Date.now();if(n<dep){let s=(dep-n)/1e3;$('cdd').textContent=Math.floor(s/86400);$('cdh').textContent=Math.floor(s%86400/3600);$('cdm').textContent=Math.floor(s%3600/60);}
+else if(n<home){const day=Math.floor((n-dep)/864e5)+1;$('cd').innerHTML=`<div><b>Day ${day}</b><span>of 18</span></div>`;$('cdl').textContent='Enjoy the trip!';}
+else{$('cd').innerHTML='<div><b>Home</b><span>welcome back</span></div>';$('cdl').textContent='What a trip.';}}
+tick();setInterval(tick,30000);
+const td=document.querySelector('.today');if(td)setTimeout(()=>td.scrollIntoView({block:'start'}),300);
+// reveal
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(rm||!('IntersectionObserver' in window))document.querySelectorAll('.rv').forEach(e=>e.classList.add('in'));
+else{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{rootMargin:'0px 0px -5% 0px'});document.querySelectorAll('.rv').forEach(e=>io.observe(e));}
+// copy
+const toast=$('toast');
 document.addEventListener('click',e=>{const el=e.target.closest('.conf');if(!el)return;const c=el.dataset.c;
-const done=()=>{toast.textContent='Copied '+c;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),1400)};
-if(navigator.clipboard&&isSecureContext)navigator.clipboard.writeText(c).then(done,fb);else fb();
-function fb(){const ta=document.createElement('textarea');ta.value=c;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove();done()}});
+const done=()=>{toast.textContent='Copied '+c;toast.classList.add('on');clearTimeout(toast._t);toast._t=setTimeout(()=>toast.classList.remove('on'),1500)};
+const fb=()=>{const ta=document.createElement('textarea');ta.value=c;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove();done()};
+if(navigator.clipboard&&isSecureContext)navigator.clipboard.writeText(c).then(done,fb);else fb();});
 </script></body></html>
