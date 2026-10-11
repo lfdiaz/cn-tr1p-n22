@@ -37,6 +37,7 @@ footer{text-align:center;color:var(--mute);font-size:12px;padding:20px}
 <div class="card hotel"><div class="tag">Check-in · 4 nights</div><b>Crystal Orange Shanghai the Bund Yu Garden Hotel</b><div class="small">Nov 23–27 · Superior Queen Room</div><span class="conf" data-c="1658114493793951">1658114493793951</span></div></div>
 <div class="day"><h3>Nov 24–26 <span class="city">· Shanghai</span></h3><p class="small">Free days in Shanghai.</p></div>
 <div class="day"><h3>Fri Nov 27 <span class="city">· Shanghai → Zhangjiajie</span></h3>
+<div class="card gap"><div class="tag">⚠ Open gap</div><b>No booked transport Shanghai → Zhangjiajie</b></div>
 <div class="card hotel"><div class="tag">Check-in · 2 nights</div><b>Zhangjiajie Ruyuan Homestay</b><div class="small">Nov 27–29 · Hefeng Double Bed Bathtub Room</div><span class="conf" data-c="1658114494064828">1658114494064828</span></div></div>
 <div class="day"><h3>Sun Nov 29 <span class="city">· Zhangjiajie</span></h3>
 <div class="card hotel"><div class="tag">Extension · 1 night (same room)</div><b>Zhangjiajie Ruyuan Homestay</b><div class="small">Nov 29–30</div><span class="conf" data-c="1658114716493655">1658114716493655</span></div></div>
@@ -65,26 +66,40 @@ footer{text-align:center;color:var(--mute);font-size:12px;padding:20px}
 <div id="hl"></div>
 
 <h2 id="gaps">Open gaps</h2>
+<div class="card gap"><b>Nov 27 · Shanghai → Zhangjiajie</b><div class="small">No transport booked.</div></div>
 <div class="card gap"><b>Nov 30 · Zhangjiajie → Xiyue·Linjiang Inn</b><div class="small">No transport booked.</div></div>
 <div class="card gap"><b>Dec 1 · Xiyue·Linjiang Inn → Chongqing</b><div class="small">No transport booked.</div></div>
 <div class="card gap"><b>Dec 8 · Beijing → Shanghai</b><div class="small">Not booked on Trip.com.</div></div>
 <div class="card transfer"><b>✓ Dec 9 drop-off timing</b><div class="small">3:00 PM pickup for a 6:50 PM international departure is fine.</div></div>
 
-<h2 id="cost">Cost summary</h2>
+<h2 id="cost">Full cost breakdown</h2>
+<h3 style="color:var(--red);font-size:16px">American Airlines · <span class="conf" data-c="NREWIS">NREWIS</span></h3>
+<table id="aa"></table>
+<p class="small">Paid with AmEx ending 3027.</p>
+<h3 style="color:var(--red);font-size:16px">Trip.com bookings</h3>
 <table id="ct"></table>
-<p class="small">American Airlines fare (NREWIS) is unknown and not included. Trip.com bookings are on account gabychavezch19@gmail.com.</p>
+<h3 style="color:var(--red);font-size:16px">Totals</h3>
+<table id="tt"></table>
+<p class="small">Trip.com bookings are on account gabychavezch19@gmail.com.</p>
 </main><footer>Made with ♥ for Luis & Gaby · 2026</footer><div id="toast">Copied</div>
 <script>
-const H=[["Crystal Orange Shanghai the Bund Yu Garden Hotel","Shanghai","Nov 23–27 · 4 nights","Superior Queen Room · guest Luis Fernando Diaz","1658114493793951","Crystal Orange Shanghai the Bund Yu Garden Hotel","桔子水晶酒店 上海外滩豫园 (search: Crystal Orange Bund Yu Garden)"],
-["Zhangjiajie Ruyuan Homestay (Wulingyuan Landmark Store, National Forest Park)","Zhangjiajie","Nov 27–30 · 3 nights (2 bookings)","Hefeng Double Bed Bathtub Room","1658114494064828 / 1658114716493655","Zhangjiajie Ruyuan Homestay Wulingyuan","张家界 如院民宿 武陵源 (search: Ruyuan Homestay Wulingyuan)"],
+const H=[["Crystal Orange Shanghai the Bund Yu Garden Hotel","Shanghai","Nov 23–27 · 4 nights","Superior Queen Room · guest Luis Fernando Diaz","1658114493793951","Crystal Orange Shanghai the Bund Yu Garden Hotel"],
+["Zhangjiajie Ruyuan Homestay (Wulingyuan Landmark Store, National Forest Park)","Zhangjiajie","Nov 27–30 · 3 nights (2 bookings)","Hefeng Double Bed Bathtub Room","1658114494064828 / 1658114716493655","Zhangjiajie Ruyuan Homestay Wulingyuan"],
 ["Xiyue·Linjiang Inn","City not shown on booking","Nov 30–Dec 1 · 1 night","Cliffside River-View Comfort Double Bed Room · guest Gabriela Chavez","1658113580437903","Xiyue Linjiang Inn","Xiyue·Linjiang Inn (check Trip.com for exact Chinese name/address)"],
-["BERKIN. Baili Jin Skyview Riverfront Hotel","Chongqing · near Liberation Monument & Hongya Cave","Dec 1–4 · 3 nights","Deep Sky Horizon 270° Crystal Tub Suite","1658114482256205","BERKIN Baili Jin Skyview Riverfront Hotel Chongqing","重庆 解放碑 洪崖洞 (search: BERKIN Baili Jin Skyview)"],
-["Manxin Mansion Beijing Houhai and Drum Tower Courtyard","Beijing","Dec 4–8 · 4 nights (2 bookings)","Yixin Double Bed Room","1658114716464081 / 1658114716470309","Manxin Mansion Beijing Houhai Drum Tower","北京 后海 鼓楼 (search: Manxin Mansion Houhai)"],
-["Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel","Shanghai","Dec 8–9 · 1 night","Treasure Big Bed Room","1658114716484076","Treasury Hotel Nanjing East Road People's Square Shanghai","上海 人民广场 南京东路步行街 (search: Treasury Hotel Nanjing East Road)"]];
-document.getElementById('hl').innerHTML=H.map(h=>`<div class="card hotel"><div class="tag">${h[1]}</div><b>${h[0]}</b><div class="small">${h[2]} · ${h[3]}</div>${h[4].split(' / ').map(c=>`<span class="conf" data-c="${c}">${c}</span> `).join('')}<div class="small" style="margin-top:6px">Amap/Baidu: ${h[6]}</div><a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h[5])}">Google Maps ↗</a><a class="map" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(h[5])}">Amap ↗</a></div>`).join('');
+["BERKIN. Baili Jin Skyview Riverfront Hotel","Chongqing · near Liberation Monument & Hongya Cave","Dec 1–4 · 3 nights","Deep Sky Horizon 270° Crystal Tub Suite","1658114482256205","BERKIN Baili Jin Skyview Riverfront Hotel Chongqing"],
+["Manxin Mansion Beijing Houhai and Drum Tower Courtyard","Beijing","Dec 4–8 · 4 nights (2 bookings)","Yixin Double Bed Room","1658114716464081 / 1658114716470309","Manxin Mansion Beijing Houhai Drum Tower"],
+["Shanghai People's Square Nanjing East Road Pedestrian Street Treasury Hotel","Shanghai","Dec 8–9 · 1 night","Treasure Big Bed Room","1658114716484076","Treasury Hotel Nanjing East Road People's Square Shanghai"]];
+document.getElementById('hl').innerHTML=H.map(h=>`<div class="card hotel"><div class="tag">${h[1]}</div><b>${h[0]}</b><div class="small">${h[2]} · ${h[3]}</div>${h[4].split(' / ').map(c=>`<span class="conf" data-c="${c}">${c}</span> `).join('')}<div class="small" style="margin-top:6px">Amap/Baidu search: ${h[5]}</div><a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h[5])}">Google Maps ↗</a><a class="map" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword=${encodeURIComponent(h[5])}">Amap ↗</a></div>`).join('');
 const C=[["Airport pickup PVG → Renmin Rd (Nov 23)",33.65],["Crystal Orange Bund Yu Garden (4 nts)",454.43],["Ruyuan Homestay (2 nts)",175.12],["Ruyuan Homestay (1 nt)",87.64],["Xiyue·Linjiang Inn (1 nt)",81.57],["BERKIN Chongqing (3 nts)",312.72],["Air China CA1440 CKG→PEK (2 pax)",221.12],["Manxin Mansion (3 nts)",315.03],["Manxin Mansion (1 nt)",98.59],["Treasury Hotel Shanghai (1 nt)",111.32],["Airport drop-off Hankou Rd → PVG (Dec 9)",23.68]];
 const t=C.reduce((a,c)=>a+Math.round(c[1]*100),0)/100;
-document.getElementById('ct').innerHTML=C.map(c=>`<tr><td>${c[0]}</td><td>$${c[1].toFixed(2)}</td></tr>`).join('')+`<tr class="tot"><td>Trip.com total</td><td>$${t.toFixed(2)}</td></tr><tr><td>American Airlines (NREWIS)</td><td>Fare unknown</td></tr>`;
+const A=[["Luis · ticket (0012362505394)",304.00],["Luis · taxes & fees",803.03],["Luis · seat DFW→PVG (33D)",30.08],["Luis · seat PVG→DFW (33D)",25.28],["Gaby · ticket (0012362505395)",304.00],["Gaby · taxes & fees",803.03],["Gaby · seat DFW→PVG (33E)",28.57],["Gaby · seat PVG→DFW (33E)",24.01]];
+const sum=L=>L.reduce((x,c)=>x+Math.round(c[1]*100),0)/100;
+const f=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const rows=L=>L.map(c=>`<tr><td>${c[0]}</td><td>${f(c[1])}</td></tr>`).join('');
+const a=sum(A);
+document.getElementById('aa').innerHTML=rows(A)+`<tr class="tot"><td>AA subtotal</td><td>${f(a)}</td></tr>`;
+document.getElementById('ct').innerHTML=rows(C)+`<tr class="tot"><td>Trip.com subtotal</td><td>${f(t)}</td></tr>`;
+document.getElementById('tt').innerHTML=`<tr><td>American Airlines</td><td>${f(a)}</td></tr><tr><td>Trip.com</td><td>${f(t)}</td></tr><tr class="tot"><td>Grand total</td><td>${f(Math.round((a+t)*100)/100)}</td></tr>`;
 const toast=document.getElementById('toast');
 document.addEventListener('click',e=>{const el=e.target.closest('.conf');if(!el)return;const c=el.dataset.c;
 const done=()=>{toast.textContent='Copied '+c;toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),1400)};
