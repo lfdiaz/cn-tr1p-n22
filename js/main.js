@@ -125,7 +125,12 @@ document.querySelectorAll('[data-city]').forEach(a=>a.addEventListener('click',e
 (function(){const box=$('globe');
  const ok=()=>{try{const c=document.createElement('canvas');return !!(window.WebGLRenderingContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(_){return false}};
  if(rm||!ok()){box.dataset.mode='static';return;}
- const go=()=>import('./globe.min.js').then(m=>m.init(box,C)).catch(err=>{box.dataset.mode='static';console.warn('3D unavailable',err&&err.message)});
+ const go=()=>import('./globe3d.min.js?v=4').then(m=>m.init(box,C)).catch(err=>{box.dataset.mode='static';console.warn('3D unavailable',err&&err.message)});
  if('IntersectionObserver' in window){const o=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){o.disconnect();(window.requestIdleCallback||setTimeout)(go,{timeout:800})}});o.observe(box);}else go();})();
 // ---- offline ----
-if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+// SW: always check for a new worker (bypassing HTTP cache); when a new one takes control, reload once so
+// the page runs the fresh HTML/JS instead of whatever an older worker served.
+if('serviceWorker' in navigator){const sw=navigator.serviceWorker;let had=!!sw.controller,re=false;
+ sw.addEventListener('controllerchange',()=>{if(had&&!re){re=true;location.reload();}had=true;});
+ addEventListener('load',()=>sw.register('./sw.js',{updateViaCache:'none'}).then(r=>{r.update().catch(()=>{});
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')r.update().catch(()=>{})});}).catch(()=>{}));}

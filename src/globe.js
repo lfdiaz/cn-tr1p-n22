@@ -1,4 +1,4 @@
-// Source for js/globe.min.js. Build: esbuild src/globe.js --bundle --minify --format=esm --outfile=js/globe.min.js
+// Source for js/globe3d.min.js. Build: esbuild src/globe.js --bundle --minify --format=esm --outfile=js/globe3d.min.js
 // 'three' resolves to vendor/three.module.min.js (vendored r170, tree-shaken at build time).
 import {WebGLRenderer,Scene,PerspectiveCamera,Group,Mesh,SphereGeometry,MeshBasicMaterial,ShaderMaterial,
  BackSide,AdditiveBlending,Vector3,CatmullRomCurve3,TubeGeometry,BufferGeometry,Float32BufferAttribute,
@@ -23,9 +23,10 @@ export function init(box,COL){
  const tilt=new Group(),spin=new Group();tilt.add(spin);scene.add(tilt);
  // globe body
  const TL=new TextureLoader(),aniso=Math.min(4,r.capabilities.getMaxAnisotropy());
- const tex=(url,mat,cb)=>TL.load(url,t=>{t.colorSpace=SRGBColorSpace;t.anisotropy=aniso;mat.map=t;mat.color.set(0xa9b3c6);mat.needsUpdate=true;cb&&cb()},undefined,()=>{});
+ const V='4'; // cache-buster, keep in sync with sw.js / js/main.js
+ const tex=(url,mat,cb,fail)=>TL.load(url+'?v='+V,t=>{t.colorSpace=SRGBColorSpace;t.anisotropy=aniso;t.generateMipmaps=true;mat.map=t;mat.color.set(0xa9b3c6);mat.needsUpdate=true;cb&&cb()},undefined,e=>{console.error('Earth texture failed: '+url,e&&(e.message||e.type||e));fail&&fail()});
  const earthM=new MeshBasicMaterial({color:0x0d1424});spin.add(new Mesh(new SphereGeometry(1,96,64),earthM));
- tex('img/earth-2k.jpg',earthM,()=>box.dataset.tex='1');
+ tex('img/earth-2k.jpg',earthM,()=>box.dataset.tex='1',()=>{earthM.color.set(0x1f4a73);earthM.needsUpdate=true;box.dataset.tex='fail';});
  // sharper China patch (95-125E, 15-45N), fetched lazily on first close zoom
  const cnM=new MeshBasicMaterial({color:0xa9b3c6,transparent:true,opacity:0,depthWrite:false});let cnLoaded=false;
  const cnPatch=new Mesh(new SphereGeometry(1.0004,48,48,(95+180)*D2R,30*D2R,45*D2R,30*D2R),cnM);cnPatch.visible=false;spin.add(cnPatch);
