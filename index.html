@@ -37,6 +37,9 @@ button{font:inherit}
 .gl-l{position:absolute;left:0;top:0;pointer-events:auto;white-space:nowrap;font-size:12.5px;font-weight:650;color:var(--ink);background:rgba(11,15,26,.78);border:1px solid color-mix(in srgb,var(--c) 70%,transparent);border-radius:999px;padding:4px 10px 4px 9px;cursor:pointer;transition:opacity .25s;min-height:28px;-webkit-tap-highlight-color:transparent}
 .gl-l:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--c);margin-right:6px;vertical-align:1px;box-shadow:0 0 8px var(--c)}
 .gl-l.off{opacity:0;pointer-events:none}
+.gl-z{position:absolute;right:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;opacity:0;transition:opacity 1s}#globe[data-mode="3d"] .gl-z{opacity:1}
+.gl-z button{width:34px;height:34px;border-radius:50%;border:1px solid rgba(242,196,107,.45);background:rgba(11,15,26,.78);color:var(--ink);font-size:18px;line-height:1;cursor:pointer;-webkit-tap-highlight-color:transparent}.gl-z button:hover{border-color:#f2c46b}
+#globe:not([data-mode="3d"]) .gl-z{display:none}
 .ghint{position:absolute;left:0;right:0;bottom:10px;font-size:11.5px;color:var(--mute);pointer-events:none;letter-spacing:.04em}
 nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:10px 12px;padding-top:calc(10px + env(safe-area-inset-top));background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
