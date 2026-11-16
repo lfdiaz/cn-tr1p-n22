@@ -18,7 +18,7 @@ const S=t=>`<div class="sm">${t}</div>`;
 const PAX=S('Passengers: Luis Fernando Diaz · Gabriela Abigail Chavez Chavarria');
 const TIP='<ul class="li"><li><b>Bring passports</b>: they are your ticket ID.</li><li>Arrive at the station <b>45 min early</b>; foreigners use the <b>manual passport gate</b>.</li></ul>';
 const train=(no,cls,route,price,sale,o,extra='')=>card('train','Train · Trip.com · '+cls,no+' · '+route,S(price)+PAX+'<span class="pill warn">Tickets on sale '+sale+' · Trip.com buys automatically</span>'+extra+TIP,[o]);
-const SHA_CRAB=card('note','Food to try · Shanghai','Must-try in Shanghai: crab-roe rice 蟹黄捞饭 / 蟹黄拌饭',
+const SHA_CRAB=`<div class="card k-note fold-wrap"><details class="fold" id="sha-crab"><summary><div class="ic">${svg('note')}</div><div class="cb"><div class="tag">Food to try · Shanghai</div><div class="ttl">Must-try in Shanghai: crab-roe rice 蟹黄捞饭 / 蟹黄拌饭</div></div><svg class="chev" width="14" height="14" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.5" fill="none"/></svg></summary><div class="fold-body">`+
   S('Ask for <b>蟹黄捞饭</b>, <b>蟹黄拌饭</b>, <b>秃黄油捞饭</b>, or <b>蟹黄面</b>. Not booked — walk-in.')+'<span class="pill warn">Not booked · walk-in</span>'+
   `<ul class="li"><li><b>Xie San Bao</b> · 蟹叁寳·蟹家宴·蟹黄捞饭（上海南京西路店） · same brand as Nanjing<br>上海市静安区南汇路74号 · West Nanjing Rd Metro (Lines 2/12/13) Exit 1 · ~¥105–115/person<br>Order 黄金蟹拌饭/蟹黄捞饭, 蟹黄砂锅, 蟹粉春卷. Queue by noon.`+
   '<br><a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('蟹叁寳 上海市静安区南汇路74号')+'">Google Maps ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword='+encodeURIComponent('蟹叁寳·蟹家宴·蟹黄捞饭（上海南京西路店）')+'">Amap ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://www.trip.com/restaurant/china/shanghai/detail/restaurant-136049196/">Trip.com ↗</a>'+
@@ -29,7 +29,7 @@ const SHA_CRAB=card('note','Food to try · Shanghai','Must-try in Shanghai: crab
   `</li><li><b>Cejerdary (Binjiang)</b> · 蟹家大院（滨江店） · splurge<br>上海市浦东新区滨江大道1777号1862时尚艺术中心一楼106单元 · 蟹黄金 ¥360/bowl · call ahead <a href="tel:+862168888833">+86 21 6888 8833</a>`+
   '<br><a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query='+encodeURIComponent('蟹家大院 滨江大道1777号')+'">Google Maps ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://uri.amap.com/search?keyword='+encodeURIComponent('蟹家大院（滨江店）')+'">Amap ↗</a><a class="lnk" target="_blank" rel="noopener" href="https://www.trip.com/restaurant/china/shanghai/detail/restaurant-57277332/">Trip.com ↗</a>'+
   taxiBtn('Cejerdary (Binjiang)','上海市浦东新区滨江大道1777号1862时尚艺术中心一楼106单元','蟹家大院（滨江店）')+
-  `</li></ul>`);
+  `</li></ul></div></details></div>`;
 const CITIES=[
 {n:'Departure',c:'hou',r:'Sun Nov 22',days:[
  {d:'2026-11-22',t:'Sun Nov 22',l:'Houston → Dallas → Shanghai',h:card('flight','Flight · American Airlines','AA 3152 · IAH 7:00 AM → DFW 8:25 AM',S('Luis &amp; Gaby · 1 bag each'),['NREWIS'])+card('flight','Flight · American Airlines','AA 127 · DFW 10:50 AM → PVG 4:50 PM <span class="sm">(+1, Nov 23)</span>',S('Seats <b>33D</b> (Luis), <b>33E</b> (Gaby)'),['NREWIS'])}]},
