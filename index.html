@@ -73,6 +73,14 @@ details.day>summary:before{content:"";position:absolute;left:-8px;top:10px;width
 .ic svg{width:18px;height:18px}.cb{min-width:0;flex:1}
 .k-flight{--k:#3b6ea5}.k-hotel{--k:#b23a2a}.k-transfer{--k:#3f7d4e}.k-train{--k:#2a7f8a}.k-activity{--k:#7b4fb0}.k-gap{--k:#d98a00}.k-bday{--k:#d14d78}.k-note{--k:#6b6f86}
 .card.fold-wrap{display:block}details.fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:11px;-webkit-tap-highlight-color:transparent}details.fold>summary::-webkit-details-marker,details.fold>summary::marker{display:none;content:none}details.fold>summary .chev{flex:none}details.fold>.fold-body{padding:4px 0 0 45px}details.fold:not([open])>.fold-body{display:none}details.fold:not([open])::details-content{display:none;content-visibility:hidden}
+details.fold.day-route>.fold-body{padding:8px 0 0}
+ol.stops{margin:8px 0 0;padding:0;list-style:none;counter-reset:st}
+ol.stops>li{position:relative;padding:10px 0 10px 36px;border-top:1px solid var(--line)}
+ol.stops>li:before{counter-increment:st;content:counter(st);position:absolute;left:0;top:12px;width:24px;height:24px;border-radius:50%;background:var(--bg2);border:1px solid var(--line);color:var(--acc);font:700 11px var(--sans);display:grid;place-items:center}
+ol.stops .when{display:block;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--acc);margin-bottom:1px}
+ol.stops .place{display:block;font-weight:650;line-height:1.3}
+ol.stops .note{display:block;font-size:13px;color:var(--mute);margin-top:2px}
+
 .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;color:var(--mute)}
 .ttl{font-weight:650;margin:1px 0 2px;line-height:1.3}.sm{font-size:13px;color:var(--mute)}.sm b{color:var(--ink);font-weight:600}
 ul.li{margin:6px 0 0;padding-left:18px;font-size:13.5px}ul.li li{margin:3px 0}
@@ -137,7 +145,7 @@ footer{text-align:center;color:var(--mute);font-size:12px;padding:24px 16px 40px
 <div class="ghint">Drag to spin · tap a city</div>
 </div>
 </header>
-<nav><button type="button" id="todayBtn">Today →</button><a href="#route">Route</a><a href="#days">Itinerary</a><a href="#disney">🎂 Nov 24</a><a href="#hotels">Hotels</a><a href="#gaps">Gaps</a><a href="#cost">Cost</a></nav>
+<nav><button type="button" id="todayBtn">Today →</button><a href="#route">Route</a><a href="#days">Itinerary</a><a href="#disney">🎂 Nov 24</a><a href="#nov25">Nov 25</a><a href="#hotels">Hotels</a><a href="#gaps">Gaps</a><a href="#cost">Cost</a></nav>
 <main>
 <section id="route" class="rv"><h2>The route</h2><p class="sub">All times are local.</p><div class="route" id="routeEl"></div>
 <div class="stats"><div class="stat"><b>18</b><span>days</span></div><div class="stat"><b>6</b><span>hotels</span></div><div class="stat"><b>6</b><span>flights</span></div></div></section>
@@ -158,5 +166,5 @@ footer{text-align:center;color:var(--mute);font-size:12px;padding:24px 16px 40px
 <div class="lbl">English</div><div id="txN"></div><div id="txA"></div>
 <div id="txNo">No Chinese address is saved for this place. Show this English name, or search it in Amap and show the driver the Chinese result on the map.</div>
 <button type="button" id="txClose">Close</button></div></dialog>
-<script src="js/main.js?v=8"></script>
+<script src="js/main.js?v=9"></script>
 </body></html>
