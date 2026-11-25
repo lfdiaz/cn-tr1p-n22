@@ -1,8 +1,8 @@
 // Offline cache. Bump VERSION (and ?v= in index.html / main.js / src/globe.js) when files change.
 // HTML + JS: network-first (cache only as offline fallback). Images: cache-first, exact URL (so ?v= busts).
 // Precache bypasses the HTTP cache (cache:'reload') so a fresh worker can never store stale files.
-const VERSION='cn26-v11';
-const ASSETS=['./','./index.html','./js/main.js?v=11','./js/globe3d.min.js?v=4','./img/earth-2k.jpg?v=4','./img/earth-cn.jpg?v=4','./manifest.webmanifest','./icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png'];
+const VERSION='cn26-v12';
+const ASSETS=['./','./index.html','./js/main.js?v=12','./js/globe3d.min.js?v=4','./img/earth-2k.jpg?v=4','./img/earth-cn.jpg?v=4','./manifest.webmanifest','./icons/icon.svg','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(VERSION).then(c=>Promise.all(ASSETS.map(u=>fetch(new Request(u,{cache:'reload'})).then(r=>{if(r.ok)return c.put(u,r)}).catch(()=>{})))));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==VERSION).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 const put=(key,r)=>{if(r&&r.ok){const cp=r.clone();caches.open(VERSION).then(c=>c.put(key,cp))}return r};
